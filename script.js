@@ -31,6 +31,7 @@ const navigationItems = [
   ['services.html', 'Capabilities'],
   ['process.html', 'Process'],
   ['about.html', 'About'],
+  ['consultation.html', 'Consultation'],
   ['contact.html', 'Contact'],
 ];
 
