@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build:env": "node scripts/generate-env.js",
+    "build": "npm run build:env"
+  },
+  "devDependencies": {}
+}
