@@ -3,7 +3,18 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
-const entries = ['index.html', 'about.html', 'contact.html', 'consultation.html', 'privacy.html', 'process.html', 'services.html', 'terms.html'];
+const entries = [
+  'index.html',
+  'about.html',
+  'contact.html',
+  'consultation.html',
+  'privacy.html',
+  'process.html',
+  'services.html',
+  'terms.html',
+  'styles.css',
+  'script.js',
+];
 
 fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
