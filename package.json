@@ -1,7 +1,14 @@
 {
+  "name": "paixengineering",
+  "private": true,
   "scripts": {
     "build:env": "node scripts/generate-env.js",
-    "build": "npm run build:env"
+    "build:static": "node scripts/build-static.js",
+    "build": "npm run build:env && npm run build:static",
+    "deploy": "npm run build && npx wrangler deploy --assets ./dist",
+    "dev": "npx wrangler dev --assets ./dist"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "wrangler": "^4.125.0"
+  }
 }
