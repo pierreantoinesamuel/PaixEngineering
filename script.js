@@ -119,8 +119,15 @@ if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(contactForm);
+    const files = formData.getAll('attachments');
+    const attachmentNames = files
+      .filter((file) => file && typeof file.name === 'string' && file.name.trim())
+      .map((file) => file.name)
+      .join(', ');
+
     const subject = encodeURIComponent(`PAIX Engineering project inquiry from ${formData.get('name')}`);
-    const body = encodeURIComponent(`Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\nCompany: ${formData.get('company') || 'Not provided'}\n\n${formData.get('message')}`);
+    const body = encodeURIComponent(`Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\nCompany: ${formData.get('company') || 'Not provided'}\nAttachments: ${attachmentNames || 'None'}\n\n${formData.get('message')}`);
+
     window.location.href = `mailto:info@paixengineering.com?subject=${subject}&body=${body}`;
   });
 }
