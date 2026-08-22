@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Engineering notes from PAIX Engineering on product development, manufacturing, and validation." />
+  <title>Blogs | PAIX Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .journal-page{background:#dfe5df;color:#101719}
+    .journal-page .site-header{background:#f1f0ea;color:#101719;border-color:rgba(16,23,25,.18)}
+    .journal-page .brand-logo{filter:none}
+    .journal-page .header-cta{border-color:#101719}
+    .journal-page .menu-toggle{border-color:#101719}
+    .journal-page .menu-toggle span{background:#101719}
+    .journal-page .mobile-nav{background:#f1f0ea;color:#101719;border-color:rgba(16,23,25,.18)}
+    .journal-hero{position:relative;isolation:isolate;overflow:hidden;background:#54c4cf;color:#f1f0ea}
+    .journal-hero:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(16,23,25,.88),rgba(16,23,25,.52) 54%,rgba(16,23,25,.25)),rgba(84,196,207,.2)}
+    .journal-hero-backdrop{position:absolute;inset:0;z-index:-2}
+    .journal-hero-backdrop img{width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:saturate(.7) contrast(1.05)}
+    .journal-heading>p:last-child{color:#d5dfd9}
+    .journal-index span{color:#d5dfd9}
+    .journal-content{background:#dfe5df}
+    .journal-feature{background:#101719;border-color:rgba(16,23,25,.2)}
+    .journal-card{background:#f1f0ea;border-color:rgba(16,23,25,.22);color:#101719}
+    .journal-card-body>p:not(.journal-meta){color:#536564}
+    .journal-card-body .journal-meta{color:#537070}
+    .journal-card a{color:#708b1a}
+    @media(max-width:800px){.journal-hero{padding-top:74px}.journal-page .mobile-nav{background:#101719;color:#f1f0ea}.journal-page .mobile-nav a{color:#f1f0ea}.journal-card{background:#f1f0ea}}
+  </style>
+</head>
+<body class="inner-page journal-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="PAIX Engineering home"><span class="brand-mark">P</span><span class="brand-name">PAIX<span>ENGINEERING</span></span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="services.html">Capabilities</a><a href="process.html">Process</a><a href="about.html">About</a><a class="active" href="blog.html">Blogs</a>
+    </nav>
+    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <div class="mobile-nav" aria-hidden="true"><a href="services.html">Capabilities</a><a href="process.html">Process</a><a href="about.html">About</a><a href="blog.html">Blogs</a><a href="contact.html">Start a project <span>↗</span></a></div>
+
+  <main id="main-content">
+    <section class="journal-hero">
+      <div class="journal-hero-backdrop" aria-hidden="true"><img src="assets/paix-visual-storyboard.jpeg" alt="" /></div>
+      <div class="journal-heading"><p class="eyebrow">05 / PAIX BLOGS</p><h1>Notes from<br /><em>the build.</em></h1><p>Practical thinking on product engineering, manufacturing, and the decisions that move hardware forward.</p></div>
+      <div class="journal-index">FIELD NOTES<br /><span>PAIX / 2026</span></div>
+    </section>
+
+    <section class="journal-content section-pad">
+      <div class="journal-toolbar"><div class="journal-filters" aria-label="Filter blog articles"><a class="is-active" href="#all">All notes</a><a href="#manufacturing">Manufacturing</a><a href="#analysis">Analysis</a><a href="#process">Process</a></div><span class="journal-count">07 ARTICLES</span></div>
+      <article class="journal-feature" id="all">
+        <div class="journal-feature-image"><img src="assets/frames/frame_024.jpg" alt="Engineer inspecting a metal component during a product development process" /><span class="journal-tag">FEATURED / FIELD NOTE</span></div>
+        <div class="journal-feature-copy"><p class="journal-meta">AUG 20, 2026&nbsp;&nbsp; / &nbsp;&nbsp;08 MIN READ</p><h2>Design for manufacturing is a <em>conversation</em>, not a checklist.</h2><p>The best production decisions happen while a design is still flexible. A practical look at the questions that keep teams from discovering risk too late.</p><a class="text-link text-link-light" href="article-dfma.html">Read the article <span>↗</span></a></div>
+      </article>
+
+      <div class="journal-grid">
+        <article class="journal-card" id="manufacturing"><div class="journal-card-image"><img src="assets/product-engineering.png" alt="Product engineering analysis and development workspace" /><span class="journal-tag">MANUFACTURING</span></div><div class="journal-card-body"><p class="journal-meta">AUG 12, 2026&nbsp;&nbsp; / &nbsp;&nbsp;06 MIN READ</p><h3>When “almost ready” is the most expensive phase.</h3><p>Five signals that a prototype needs another engineering loop before it meets production.</p><a href="article-almost-ready.html" aria-label="Read When almost ready is the most expensive phase">Read note <span>↗</span></a></div></article>
+        <article class="journal-card" id="analysis"><div class="journal-card-image"><img src="assets/frames/frame_041.jpg" alt="Close view of an engineered part under inspection" /><span class="journal-tag">ANALYSIS</span></div><div class="journal-card-body"><p class="journal-meta">JUL 28, 2026&nbsp;&nbsp; / &nbsp;&nbsp;07 MIN READ</p><h3>What simulation is really for.</h3><p>FEA is most useful when it makes a difficult design tradeoff easier to see and explain.</p><a href="article-simulation.html" aria-label="Read What simulation is really for">Read note <span>↗</span></a></div></article>
+        <article class="journal-card" id="process"><div class="journal-card-image"><img src="assets/engineer-caliper.png" alt="Engineer measuring a component with calipers" /><span class="journal-tag">PROCESS</span></div><div class="journal-card-body"><p class="journal-meta">JUL 16, 2026&nbsp;&nbsp; / &nbsp;&nbsp;05 MIN READ</p><h3>Measure twice. Build with confidence.</h3><p>Why careful observation before the next decision can save weeks of downstream rework.</p><a href="article-measure.html" aria-label="Read Measure twice. Build with confidence">Read note <span>↗</span></a></div></article>
+        <article class="journal-card"><div class="journal-card-image journal-card-image-acid"><span class="journal-card-mark">P<span>/</span>E</span><span class="journal-tag">PERSPECTIVE</span></div><div class="journal-card-body"><p class="journal-meta">JUL 02, 2026&nbsp;&nbsp; / &nbsp;&nbsp;04 MIN READ</p><h3>Build the handoff into the design.</h3><p>Good engineering leaves the next team with clarity, not a scavenger hunt.</p><a href="article-handoff.html" aria-label="Read Build the handoff into the design">Read note <span>↗</span></a></div></article>
+        <article class="journal-card"><div class="journal-card-image"><img src="assets/frames/frame_057.jpg" alt="Technical component being reviewed during product development" /><span class="journal-tag">VALIDATION</span></div><div class="journal-card-body"><p class="journal-meta">JUN 24, 2026&nbsp;&nbsp; / &nbsp;&nbsp;06 MIN READ</p><h3>Test plans should answer a question.</h3><p>A useful validation plan connects every measurement to a decision the team needs to make.</p><a href="article-validation.html" aria-label="Read Test plans should answer a question">Read note <span>↗</span></a></div></article>
+        <article class="journal-card"><div class="journal-card-image"><img src="assets/frames/frame_066.jpg" alt="Product detail viewed during an engineering inspection" /><span class="journal-tag">DESIGN</span></div><div class="journal-card-body"><p class="journal-meta">JUN 11, 2026&nbsp;&nbsp; / &nbsp;&nbsp;05 MIN READ</p><h3>Constraints are design material.</h3><p>Cost, process, and schedule become useful inputs when they arrive early enough to shape the answer.</p><a href="article-constraints.html" aria-label="Read Constraints are design material">Read note <span>↗</span></a></div></article>
+      </div>
+    </section>
+    <section class="band-cta"><p class="eyebrow">HAVE A QUESTION THE BLOGS CANNOT ANSWER?</p><h2>Bring the<br />hard part.</h2><a class="button button-primary" href="contact.html">Talk to an engineer <span>↗</span></a></section>
+  </main>
+  <footer class="site-footer"><span>© 2026 PAIX ENGINEERING</span><span>DESIGNED FOR THE REAL WORLD</span><span class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span><a href="index.html">BACK TO HOME ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
