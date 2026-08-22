@@ -40,7 +40,7 @@ document.querySelectorAll('.desktop-nav').forEach((nav) => {
 });
 
 document.querySelectorAll('.mobile-nav').forEach((nav) => {
-  nav.innerHTML = navigationItems.map(([href, label]) => `<a href="${href}"${currentPage === href ? ' aria-current="page"' : ''}>${label}</a>`).join('');
+  nav.innerHTML = `${navigationItems.map(([href, label]) => `<a href="${href}"${currentPage === href ? ' aria-current="page"' : ''}>${label}</a>`).join('')}<a class="mobile-booking-link" href="consultation.html"${currentPage === 'consultation.html' ? ' aria-current="page"' : ''}>Book a consultation <span aria-hidden="true">↗</span></a>`;
 });
 
 document.querySelectorAll('.header-cta').forEach((cta) => {
